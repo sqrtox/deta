@@ -17,6 +17,9 @@
   "keywords": [
     "deta"
   ],
+  "files": [
+    "./dist/"
+  ],
   "author": "sqrtox",
   "license": "MIT",
   "bugs": {
