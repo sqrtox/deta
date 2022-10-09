@@ -21,7 +21,7 @@ const commentsBase = new Base({
   projectKey: PROJECT_KEY
 });
 
-const comment = await comments.get('c0mment1d');
+const comment = await commentsBase.get('c0mment1d');
 ```
 
 ```ts
