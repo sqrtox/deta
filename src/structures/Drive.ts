@@ -1,6 +1,6 @@
 import axiosStatic, { type AxiosInstance } from 'axios';
 import { DriveFileUploader } from '~/structures/DriveFileUploader';
-import { assertsProjectKey } from '~/util/project-key';
+import { assertIsProjectKey } from '~/util/project-key';
 
 type DriveOptions = Readonly<{
   name: string,
@@ -36,7 +36,7 @@ class Drive<N extends string = string> {
   readonly #axios: AxiosInstance;
 
   constructor({ name, projectKey }: DriveOptions) {
-    assertsProjectKey(projectKey);
+    assertIsProjectKey(projectKey);
 
     const projectId = projectKey.split('_')[0];
 

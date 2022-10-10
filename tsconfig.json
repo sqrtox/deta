@@ -4,10 +4,7 @@
     "module": "CommonJS",
     "strict": true,
     "baseUrl": "./",
-    "outDir": "./dist/",
-    "declarationMap": true,
-    "declaration": true,
-    "sourceMap": true,
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "~/*": [
@@ -16,7 +13,9 @@
     }
   },
   "include": [
-    "./src/**/*.ts"
+    "./src/**/*.ts",
+    "./test/**/*.ts",
+    "./jest.config.ts"
   ],
   "exclude": [
     "./node_modules/"

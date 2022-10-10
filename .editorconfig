@@ -14,7 +14,7 @@ insert_final_newline = true
 
 trim_trailing_whitespace = false
 
-[{/dist/**,/node_modules/**,package-lock.json}]
+[{/dist/**,/coverage/**,/node_modules/**,package-lock.json}]
 
 indent_style = unset
 indent_size = unset

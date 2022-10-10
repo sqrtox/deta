@@ -1,6 +1,6 @@
 import axiosStatic, { type AxiosInstance } from 'axios';
 import { isArray } from '~/util/isArray';
-import { assertsProjectKey } from '~/util/project-key';
+import { assertIsProjectKey } from '~/util/project-key';
 
 type BasePrimitiveType = boolean | number | string;
 type BaseNullishType = null | undefined;
@@ -77,7 +77,7 @@ class Base<K extends string = string, V extends BaseObjectType = BaseObjectType>
     projectKey,
     encodeKey = (key: string) => encodeURIComponent(key)
   }: BaseOptions) {
-    assertsProjectKey(projectKey);
+    assertIsProjectKey(projectKey);
 
     const projectId = projectKey.split('_')[0];
 

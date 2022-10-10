@@ -3,3 +3,6 @@ dist/
 
 # Node.js
 node_modules/
+
+# Jest
+coverage/

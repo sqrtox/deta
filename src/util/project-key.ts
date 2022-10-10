@@ -7,17 +7,17 @@ const isProjectKey = (projectKey: unknown): projectKey is ProjectKey => (
   /^[\da-z]+_[\da-zA-Z]+$/.test(projectKey)
 );
 
-type AssertsProjectKey = (projectKey: unknown) => asserts projectKey is ProjectKey;
+type AssertIsProjectKey = (projectKey: unknown) => asserts projectKey is ProjectKey;
 
-const assertsProjectKey: AssertsProjectKey = projectKey => {
+const assertIsProjectKey: AssertIsProjectKey = projectKey => {
   if (!isProjectKey(projectKey)) {
     throw new TypeError('Invalid project key');
   }
 };
 
 export {
-  type AssertsProjectKey,
+  type AssertIsProjectKey,
   type ProjectKey,
-  assertsProjectKey,
+  assertIsProjectKey,
   isProjectKey
 };
