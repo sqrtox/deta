@@ -15,7 +15,7 @@
     "prepare": "npm run build",
     "doc": "run-s doc:*",
     "doc:clean": "rimraf doc",
-    "doc:generate": "typedoc src --out doc --sourceLinkTemplate https://github.com/sqrtox/deta/blob/{gitRevision}/{path}#L{line}"
+    "doc:generate": "typedoc src --out docs --sourceLinkTemplate https://github.com/sqrtox/deta/blob/{gitRevision}/{path}#L{line}"
   },
   "publishConfig": {
     "access": "public"
