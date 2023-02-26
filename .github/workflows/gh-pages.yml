@@ -10,18 +10,15 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 7.27.1
       - uses: actions/setup-node@v3
         with:
           node-version: 14
 
       - name: Install
-        run: pnpm i --frozen-lockfile
+        run: npm i --frozen-lockfile
 
       - name: Build
-        run: pnpm doc
+        run: npm run doc
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
